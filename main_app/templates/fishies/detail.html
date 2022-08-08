@@ -21,7 +21,7 @@
 
 {% block content %}
 
-<section class="cat-container">
+<div class="cat-container">
   <div class="cat-img">
     <img 
       src="{% static 'images/sk8r-boi-cat.svg' %}" 
@@ -41,7 +41,7 @@
       <a href="{% url 'fishies_delete' fish.id %}" class="btn danger">Delete</a>
     </div>
   </div>
-</section>
+</div>
 <div class="feedings-toy-container">
   <section class="feedings">
     <div class="subsection-title">

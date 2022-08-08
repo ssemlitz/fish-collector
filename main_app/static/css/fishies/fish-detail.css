@@ -29,6 +29,7 @@
   flex-direction: column;
   padding-bottom: 20px;
   align-items: center;
+  background-color: red;
 }
 
 .subsection-title {
@@ -105,6 +106,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
+  background-color: red;
 }
 
 .subsection-title img {

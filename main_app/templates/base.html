@@ -2,72 +2,54 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
-  <link
-    rel="shortcut icon"
-    type="image/png"
-    href=""
-  >
-  <title>Fish Collector</title>
-  <link
-  rel="shortcut icon"
-  type="image/png"
-  href="{% static 'images/splash.svg' %}"
-  >
-  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-  {% block head %}
-  {% endblock %}
-</head>
-<body>
-  
-    
-  <div id="animation-bg">
-    <header>
-      <div class="header-logo-container">
-        <a href="/">
-          <img 
-            src="{% static 'images/header-logo.svg' %}"
-            alt="The Cat Collector Logo"
-          >
-        </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="" />
+    <title>Fish Collector</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'images/splash.svg' %}"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <section>
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+
+      <div>
+        <header>
+          <div class="header-logo-container">
+            <a href="/">
+              <img
+                src="{% static 'images/header-logo.svg' %}"
+                alt="The Cat Collector Logo"
+              />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'fishies_index' %}">All Fish</a></li>
+              <li><a href="{% url 'fishies_create' %}">Add a Fish</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'logout' %}">Log out</a></li>
+              {% else %}
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'home' %}">Login</a></li>
+              <li><a href="{% url 'signup' %}">Sign Up</a></li>
+              {% endif %}
+            </ul>
+          </nav>
+        </header>
+        <main animation-bg>{% block content %} {% endblock %}</main>
       </div>
-      <nav>
-        <ul>
-          {% if user.is_authenticated %}
-            <li><a href="{% url 'fishies_index' %}">All Fish</a></li>
-            <li><a href="{% url 'fishies_create' %}">Add a Fish</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'logout' %}">Log out</a></li>
-          {% else %}
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'home' %}">Login</a></li>
-            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
-    <main animation-bg>
-      {% block content %}
-      {% endblock %}
-    </main>
-  </div>
-  <script>
-    VANTA.WAVES({
-      el: "#animation-bg",
-      mouseControls: false,
-      touchControls: false,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      waveSpeed: 0.0
-    })
-    </script>
-</body>
+    </section>
+  </body>
 </html>
