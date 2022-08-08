@@ -35,7 +35,7 @@ class FishCreate(LoginRequiredMixin, CreateView):
 
 class FishUpdate(LoginRequiredMixin, UpdateView):
   model = Fish
-  fields = '__all__'
+  fields = ['name', 'breed', 'description', 'age']
 
 class FishDelete(LoginRequiredMixin, DeleteView):
   model = Fish
