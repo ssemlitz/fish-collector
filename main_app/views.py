@@ -5,7 +5,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Fish, Feeding
+from .models import Fish
 from .forms import FeedingForm
 
 class Home(LoginView):
@@ -25,21 +25,18 @@ def fishies_detail(request, fish_id):
   feeding_form = FeedingForm()
   return render(request, 'fishies/detail.html', { 'fish': fish, 'feeding_form': feeding_form })
 
-@login_required
 class FishCreate(LoginRequiredMixin, CreateView):
   model = Fish
-  fields = '__all__'
+  fields = ['name', 'breed', 'description', 'age']
 
   def form_valid(self, form):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-@login_required
 class FishUpdate(LoginRequiredMixin, UpdateView):
   model = Fish
   fields = '__all__'
 
-@login_required
 class FishDelete(LoginRequiredMixin, DeleteView):
   model = Fish
   success_url = '/fishies/'
