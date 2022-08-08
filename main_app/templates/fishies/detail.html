@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/fishies/fish-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="cat-container">
+  <div class="cat-img">
+    <img 
+      src="{% static 'images/sk8r-boi-cat.svg' %}" 
+      alt="A skater boy cat"
+    >
+  </div>
+  <div class="cat-details">
+    <h1>{{ fish.name }}</h1>
+    {% if fish.age > 0 %}
+      <h2>A {{ fish.age }} year old {{ fish.breed }}</h2>
+    {% else %}
+      <h2>A {{ fish.breed }} kitten.</h2>
+    {% endif %}
+    <p>{{ fish.description }}</p>
+  </div>
+</section>
+
+{% endblock %}
