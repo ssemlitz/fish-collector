@@ -63,6 +63,10 @@ main > section {
   margin-top: 16px;
 }
 
+.landing-h1 {
+  font-size: larger;
+}
+
 @media only screen and (min-width: 768px) {
   main {
     justify-content: space-around;
@@ -76,7 +80,6 @@ main > section {
     border: var(--borders);
     padding: 20px;
     border-radius: var(--card-border-radius);
-    box-shadow: var(--card-box-shadow);
     width: 100%;
   }
 
