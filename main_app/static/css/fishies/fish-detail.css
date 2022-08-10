@@ -100,7 +100,7 @@
   border: var(--borders);
   border-radius: var(--card-border-radius);
   padding: 10px;
-  box-shadow: var(--card-box-shadow);
+  /* box-shadow: var(--card-box-shadow); */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
