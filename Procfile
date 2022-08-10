@@ -1,1 +1,1 @@
-web: gunicorn fishbook-ss.wsgi
+web: gunicorn fishcollector.wsgi
