@@ -16,6 +16,7 @@
 
 .card:hover {
   transform: scale(1.1);
+  background-color: #7cb0ff;
 }
 
 .card-content {
