@@ -29,7 +29,6 @@
   flex-direction: column;
   padding-bottom: 20px;
   align-items: center;
-  background-color: red;
 }
 
 .subsection-title {
@@ -95,7 +94,7 @@
   margin: 5px 0;
 }
 
-.feedings-toy-container > section {
+.feedings-toy-container > div {
   width: 80%;
   min-width: 360px;
   border: var(--borders);
@@ -104,9 +103,12 @@
   box-shadow: var(--card-box-shadow);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
-  background-color: red;
+  margin-top: 50px;
+  background-color: white;
+  overflow-y: scroll;
+  max-height: 500px;
 }
 
 .subsection-title img {

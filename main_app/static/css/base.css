@@ -28,7 +28,7 @@ body {
   min-height: 100vh;
   --nav-bg: rgba(104, 197, 248, .7);
   --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
+  --borders: rgb(27, 26, 39) solid 2px;
   --text-color: rgb(17, 20, 17);
   --link-hover-color: rgb(16, 56, 158);
   --button-bg: rgb(245, 245, 245);
@@ -207,7 +207,6 @@ section .wave.wave4{
   opacity: 0.7;
   animation-delay: -5s;
   bottom: 10px;
-
 }
 @keyframes animate{
   0%{

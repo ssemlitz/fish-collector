@@ -9,12 +9,13 @@
 
 <section class="logo-container">
   <div class="cat-container">
-    <img src="{% static 'images/splash.svg' %}" alt="The Fish Collector Fish" />
+    <img src="{% static 'images/lemmling-Cartoon-polarbear.svg' %}" alt="The Fish Collector Fish" />
   </div>
-  <img 
+  <h1>FishBook</h1>
+  {% comment %} <img 
     src="{% static 'images/logotype.svg' %}" 
     alt="Text reads: Fish Collector"
-  />
+  /> {% endcomment %}
 </section>
 
 {% if not user.is_authenticated %}
