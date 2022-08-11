@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="about-page">
@@ -12,6 +12,7 @@
   </div>
   <br>
   <br>
+  <img src="{% static 'images/fishcat.png' %}" alt="catfish"/>
   <div class="about-quote">
     <p>
       "Fish are friends, not food."
