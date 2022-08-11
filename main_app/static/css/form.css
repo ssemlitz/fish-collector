@@ -31,6 +31,15 @@ td > * {
 td > textarea {
   height: calc(4 * var(--font-l) + 8px);
   font-family: inherit;
+  border-radius: 5px;
+  background-color: #81b3ff;
+}
+
+td > input {
+  font-size: var(--font-l);
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #81b3ff;
 }
 
 .btn {

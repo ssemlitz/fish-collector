@@ -55,6 +55,8 @@ main > section {
 .login input {
   font-size: var(--font-l);
   padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #81b3ff;
 }
 
 .login .btn {
@@ -64,7 +66,8 @@ main > section {
 }
 
 .landing-h1 {
-  font-size: larger;
+  font-size: 4em;
+  font-family: 'DynaPuff';
 }
 
 @media only screen and (min-width: 768px) {

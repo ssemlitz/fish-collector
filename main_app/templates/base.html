@@ -14,6 +14,7 @@
     href="{% static 'images/favicon.ico' %}"
   >
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=DynaPuff&family=Londrina+Shadow&family=Manrope:wght@400;500;600;700&family=Merriweather&family=Montserrat&family=Poiret+One&family=Sacramento&display=swap" rel="stylesheet">
     {% block head %} {% endblock %}
   </head>
   <body>
@@ -22,15 +23,11 @@
       <div class="wave wave2"></div>
       <div class="wave wave3"></div>
       <div class="wave wave4"></div>
-
       <div>
         <header>
           <div class="header-logo-container">
             <a href="/">
-              <img
-                src="{% static 'images/header-logo.svg' %}"
-                alt="The Cat Collector Logo"
-              />
+              <img class="header-img" src="{% static 'images/lemmling-Cartoon-polarbear.svg' %}" alt="">
             </a>
           </div>
           <nav>
@@ -48,7 +45,7 @@
             </ul>
           </nav>
         </header>
-        <main animation-bg>{% block content %} {% endblock %}</main>
+        <main>{% block content %} {% endblock %}</main>
       </div>
     </section>
   </body>

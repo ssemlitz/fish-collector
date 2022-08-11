@@ -59,21 +59,23 @@
         alt="A kabob of kittens"
       />
     </div>
-    <h3>Add a Feeding</h3>
-    <form
+    <div class="feeding-form-div">
+      <h3>Add a Feeding</h3>
+      <form
       action="{% url 'add_feeding' fish.id %}"
       method="post" 
       class="subsection-content"
     >
       {% if fish.fed_for_today %}
-        <p class="fed">{{fish.name}} has been fed all their meals for today!</p>
+      <p class="fed">{{fish.name}} has been fed all their meals for today!</p>
       {% else %}
-        <p class="unfed">{{fish.name}} might be hungry!</p>
+      <p class="unfed">{{fish.name}} might be hungry!</p>
       {% endif %}
       {% csrf_token %}
       {{ feeding_form.as_p }}
       <button type="submit" class="btn submit">Add Feeding</button>
     </form>
+  </div>
     <h3>Past Feedings</h3>
     {% if fish.feeding_set.all.count %}
       <table>
