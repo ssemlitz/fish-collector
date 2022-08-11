@@ -33,10 +33,12 @@ td > textarea {
   font-family: inherit;
   border-radius: 5px;
   background-color: #81b3ff;
+  font-size: var(--font-l);
 }
 
 td > input {
   font-size: var(--font-l);
+  font-family: inherit;
   padding: 2px 4px;
   border-radius: 5px;
   background-color: #81b3ff;
