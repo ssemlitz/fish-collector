@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_BITIO_NAME=ssemlitz/fishcollector
       - POSTGRES_BITIO_USER=ssemlitz
-      - POSTGRES_BITIO_PASSWORD=v2_3xSaG_5GEM4WUG8F5GcZGSSp9M6MC
+      - POSTGRES_BITIO_PASSWORD=v2_3xSkg_bxptp7xiXZSnwFa3aqhRLrf
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -25,6 +25,6 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_BITIO_NAME=ssemlitz/fishcollector
       - POSTGRES_BITIO_USER=ssemlitz
-      - POSTGRES_BITIO_PASSWORD=v2_3xSaG_5GEM4WUG8F5GcZGSSp9M6MC
+      - POSTGRES_BITIO_PASSWORD=v2_3xSkg_bxptp7xiXZSnwFa3aqhRLrf
     depends_on:
       - db

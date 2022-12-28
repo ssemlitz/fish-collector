@@ -91,7 +91,7 @@ DATABASES = {
         'PASSWORD': os.environ.get('POSTGRES_BITIO_PASSWORD'),
         'HOST': 'db.bit.io',
         'PORT': 5432,
-        'OPTIONS': {'sslmode': 'require'},
+        # 'OPTIONS': {'sslmode': 'require'},
     }
 }
 
