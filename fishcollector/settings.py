@@ -86,11 +86,12 @@ DATABASES = {
         # 'NAME': os.environ.get('POSTGRES_NAME'),
         # 'USER': os.environ.get('POSTGRES_USER'),
         # 'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'NAME': 'fishcollector',
-        'USER': 'ssemlitz',
+        'NAME': os.environ.get('POSTGRES_BITIO_NAME'),
+        'USER': os.environ.get('POSTGRES_BITIO_USER'),
         'PASSWORD': os.environ.get('POSTGRES_BITIO_PASSWORD'),
         'HOST': 'db.bit.io',
         'PORT': 5432,
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
